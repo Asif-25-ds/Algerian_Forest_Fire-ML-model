@@ -1,0 +1,25 @@
+<html >
+<head>
+    <title>Homepage
+    </title>
+</head>
+<body>
+    <h1 align="center">FWI PREDICTION</h1>
+    <form action="{{url_for('predict_datapoint')}}" method="POST">
+        Temperature:<input type="text" name="Temperature" placeholder="Temperature" ><br><br>
+        RH:<input type="text" name="RH" placeholder="RH"><br><br>
+        Ws:<input type="text" name="Ws" placeholder="Ws"><br><br>
+        Rain:<input type="text" name="Rain" placeholder="Rain"><br><br>
+        FFMC:<input type="text" name="FFMC" placeholder="FFMC"><br><br>
+        DMC:<input type="text" name="DMC" placeholder="DMC"><br><br>
+        ISI:<input type="text" name="ISI" placeholder="ISI"><br><br>
+        Classes:<input type="text" name="Classes" placeholder="Classes"><br><br>
+        Region:<input type="text" name="Region" placeholder="Region"><br><br>
+        <button type="submit" name="Predict">Predict</button>
+    </form>
+    <h2>
+        Your FWI Prediciton is {{ result }}
+    </h2>
+
+</body>
+</html>
